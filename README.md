@@ -19,6 +19,7 @@ pnpx skills add PsiACE/skills --skill='*' -g
 | Skill | Description |
 | --- | --- |
 | [friendly-python](skills/friendly-python) | Practical guidance for writing, refactoring, and reviewing friendly Python code |
+| [fast-rust](skills/fast-rust) | Practical guidance for writing, refactoring, and reviewing fast, reliable, and maintainable Rust code |
 
 ## Notes
 
