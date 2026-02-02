@@ -18,7 +18,7 @@ pnpx skills add PsiACE/skills --skill='*' -g
 
 | Skill | Description |
 | --- | --- |
-| [friendly-python](friendly-python) | Practical guidance for writing, refactoring, and reviewing friendly Python code |
+| [friendly-python](skills/friendly-python) | Practical guidance for writing, refactoring, and reviewing friendly Python code |
 
 ## Notes
 
