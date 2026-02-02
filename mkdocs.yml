@@ -1,9 +1,10 @@
 site_name: PsiACE's Skills
-repo_url: https://github.com/PsiACE/skills
+repo_url: https://github.com/psiace/skills
+site_url: https://psiace.github.io/skills/
 site_description: A personal collection of agent skills reflecting preferred engineering practices.
 site_author: Chojan Shang
 edit_uri: edit/main/skills/
-repo_name: PsiACE/skills
+repo_name: psiace/skills
 
 docs_dir: "skills"
 
@@ -11,7 +12,7 @@ nav:
   - Home: README.md
   - Skills:
       - friendly-python:
-          - Overview: friendly-python/SKILL.md
+          - friendly-python/SKILL.md
           - API Design: friendly-python/references/api-design.md
           - CLI Argparse: friendly-python/references/cli-argparse.md
           - Error Handling: friendly-python/references/error-handling.md
@@ -22,7 +23,7 @@ nav:
           - Reuse & Composition: friendly-python/references/reuse-composition.md
           - Review Checklist: friendly-python/references/review-checklist.md
       - fast-rust:
-          - Overview: fast-rust/SKILL.md
+          - fast-rust/SKILL.md
           - Compilation Optimization: fast-rust/references/compilation-optimization.md
           - Error Design: fast-rust/references/error-design.md
           - Type Exercise: fast-rust/references/type-exercise.md
@@ -65,4 +66,4 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/PsiACE/skills
+      link: https://github.com/psiace/skills

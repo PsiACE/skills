@@ -1,5 +1,8 @@
 # Skills Documentation
 
+This site is the reading surface for the skill library. For repository setup and development workflow, see:
+https://github.com/psiace/skills#readme
+
 ## Quick Start
 
 1. Pick a skill from the index below.

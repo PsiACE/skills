@@ -29,6 +29,9 @@ Build the static site:
 uv run mkdocs build -f mkdocs.yml
 ```
 
+Online docs:
+https://psiace.github.io/skills/
+
 ## Skills
 
 | Skill | Description |
