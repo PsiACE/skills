@@ -10,23 +10,22 @@ docs_dir: "skills"
 
 nav:
   - Home: README.md
-  - Skills:
-      - friendly-python:
-          - friendly-python/SKILL.md
-          - API Design: friendly-python/references/api-design.md
-          - CLI Argparse: friendly-python/references/cli-argparse.md
-          - Error Handling: friendly-python/references/error-handling.md
-          - Extension Architecture: friendly-python/references/extension-architecture.md
-          - OOP Design: friendly-python/references/oop-design.md
-          - Portability & Pythonic: friendly-python/references/portability-pythonic.md
-          - Principles: friendly-python/references/principles.md
-          - Reuse & Composition: friendly-python/references/reuse-composition.md
-          - Review Checklist: friendly-python/references/review-checklist.md
-      - fast-rust:
-          - fast-rust/SKILL.md
-          - Compilation Optimization: fast-rust/references/compilation-optimization.md
-          - Error Design: fast-rust/references/error-design.md
-          - Type Exercise: fast-rust/references/type-exercise.md
+  - Friendly Python:
+      - Friendly Python: friendly-python/SKILL.md
+      - API Design: friendly-python/references/api-design.md
+      - CLI Argparse: friendly-python/references/cli-argparse.md
+      - Error Handling: friendly-python/references/error-handling.md
+      - Extension Architecture: friendly-python/references/extension-architecture.md
+      - OOP Design: friendly-python/references/oop-design.md
+      - Portability & Pythonic: friendly-python/references/portability-pythonic.md
+      - Principles: friendly-python/references/principles.md
+      - Reuse & Composition: friendly-python/references/reuse-composition.md
+      - Review Checklist: friendly-python/references/review-checklist.md
+  - Fast Rust:
+      - Fast Rust: fast-rust/SKILL.md
+      - Compilation Optimization: fast-rust/references/compilation-optimization.md
+      - Error Design: fast-rust/references/error-design.md
+      - Type Exercise: fast-rust/references/type-exercise.md
 
 plugins:
   - search
