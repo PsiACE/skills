@@ -32,6 +32,7 @@ Concise guidance for high-quality Rust engineering, balancing correctness, maint
 | --- | --- | --- |
 | Error Design | Design error boundaries and semantics before propagation | `references/error-design.md` |
 | Compilation | Optimize build time and release performance with measured changes | `references/compilation-optimization.md` |
+| Type Exercise | Type-level exercise for expression engines and dispatch | `references/type-exercise.md` |
 
 ## References
 
