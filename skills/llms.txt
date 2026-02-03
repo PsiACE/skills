@@ -1,0 +1,37 @@
+# PsiACE Skills
+
+> A concise, LLM-friendly index of PsiACE's skill library for coding agents.
+
+This file is Markdown-first for clean parsing. For human-friendly reading, use the website at https://skills.psiace.me. Start with each skill's SKILL.md to understand triggers and workflow. References are short, focused guides for deeper topics.
+
+## Core (Markdown)
+
+- [Skills overview](https://raw.githubusercontent.com/psiace/skills/main/skills/README.md): Site overview, conventions, and index.
+- [Friendly Python skill](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/SKILL.md): Entry point for Python guidance.
+- [Fast Rust skill](https://raw.githubusercontent.com/psiace/skills/main/skills/fast-rust/SKILL.md): Entry point for Rust guidance.
+
+## Friendly Python references (Markdown)
+
+- [API design](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/api-design.md): Guidance for shaping Python APIs.
+- [CLI argparse](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/cli-argparse.md): Argparse patterns and conventions.
+- [Error handling](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/error-handling.md): Exceptions, error models, and resilience.
+- [Extension architecture](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/extension-architecture.md): Plugin systems and extension points.
+- [OOP design](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/oop-design.md): Practical object modeling.
+- [Portability and Pythonic style](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/portability-pythonic.md): Cross-platform behavior and idioms.
+- [Principles](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/principles.md): Core principles and heuristics.
+- [Reuse and composition](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/reuse-composition.md): Composition-oriented design.
+- [Review checklist](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/review-checklist.md): Code review focus areas.
+
+## Fast Rust references (Markdown)
+
+- [Compilation optimization](https://raw.githubusercontent.com/psiace/skills/main/skills/fast-rust/references/compilation-optimization.md): Build times and incremental workflow.
+- [Error design](https://raw.githubusercontent.com/psiace/skills/main/skills/fast-rust/references/error-design.md): Error types, context, and ergonomics.
+- [Type exercise](https://raw.githubusercontent.com/psiace/skills/main/skills/fast-rust/references/type-exercise.md): Type-driven design practice.
+
+## Optional (Markdown)
+
+- [Repository README](https://raw.githubusercontent.com/psiace/skills/main/README.md): Repo setup and development workflow.
+
+## For humans
+
+- https://skills.psiace.me

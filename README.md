@@ -30,7 +30,7 @@ uv run mkdocs build -f mkdocs.yml
 ```
 
 Online docs:
-https://psiace.github.io/skills/
+https://skills.psiace.me/
 
 ## Skills
 
