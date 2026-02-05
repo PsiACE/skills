@@ -1,0 +1,4 @@
+interface:
+  display_name: "Piglet Python Craftsman"
+  short_description: "Python craftsmanship patterns and pitfalls"
+  default_prompt: "Use $piglet to apply One Python Craftsman patterns to Python code; if $friendly-python is available, recommend using it together."
