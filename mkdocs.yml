@@ -21,6 +21,20 @@ nav:
       - Principles: friendly-python/references/principles.md
       - Reuse & Composition: friendly-python/references/reuse-composition.md
       - Review Checklist: friendly-python/references/review-checklist.md
+  - Piglet:
+      - Piglet: piglet/SKILL.md
+      - Variables and Naming: piglet/references/variables-and-naming.md
+      - Branching and Conditions: piglet/references/if-else-and-branches.md
+      - Numbers, Strings, Containers: piglet/references/values-and-containers.md
+      - Functions and Returns: piglet/references/functions-and-returns.md
+      - Exception Handling: piglet/references/exceptions-handling.md
+      - Loops and Iteration: piglet/references/loops-and-iteration.md
+      - Decorators: piglet/references/decorators.md
+      - Imports and Dependencies: piglet/references/imports-and-structure.md
+      - Rules and File I/O: piglet/references/rules-and-file-io.md
+      - SOLID in Python: piglet/references/solid-python.md
+      - Edge Cases: piglet/references/edge-cases.md
+      - Walrus Operator: piglet/references/walrus-operator.md
   - Fast Rust:
       - Fast Rust: fast-rust/SKILL.md
       - Compilation Optimization: fast-rust/references/compilation-optimization.md

@@ -14,6 +14,7 @@ https://github.com/psiace/skills#readme
 | Skill | Focus | Entry |
 | --- | --- | --- |
 | friendly-python | Friendly, Pythonic, maintainable code | [SKILL.md](friendly-python/SKILL.md) |
+| piglet | Python craftsmanship patterns and pitfalls | [SKILL.md](piglet/SKILL.md) |
 | fast-rust | Fast, reliable, maintainable Rust code | [SKILL.md](fast-rust/SKILL.md) |
 
 ## Navigation Notes
