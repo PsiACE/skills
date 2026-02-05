@@ -2,7 +2,7 @@
 
 A small, shared skill library by builders, for builders.
 
-This repo includes skills from me and my friends. The content comes from our own practice and selected public sources. Give them a try, read along, and enjoy the craft of building.
+[This repo](https://github.com/psiace/skills) includes skills from me and my friends. The content comes from our own practice and selected public sources. Give them a try, read along, and enjoy the craft of building.
 
 Online docs: https://skills.psiace.me/
 
@@ -44,3 +44,7 @@ uv run mkdocs build -f mkdocs.yml
 ## Notes
 
 - This collection is small by design and may change as we learn.
+
+## Acknowledgements
+
+See [skills/ACKNOWLEDGEMENTS.md](skills/ACKNOWLEDGEMENTS.md).

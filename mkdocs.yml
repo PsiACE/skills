@@ -10,6 +10,7 @@ docs_dir: "skills"
 
 nav:
   - Home: README.md
+  - Acknowledgements: ACKNOWLEDGEMENTS.md
   - Friendly Python:
       - Friendly Python: friendly-python/SKILL.md
       - API Design: friendly-python/references/api-design.md
@@ -46,6 +47,7 @@ plugins:
 
 theme:
   name: terminal
+  custom_dir: overrides
   palette: dark
   features:
     - navigation.instant
