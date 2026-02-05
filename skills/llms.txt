@@ -8,6 +8,7 @@ This file is Markdown-first for clean parsing. For human-friendly reading, use t
 
 - [Skills overview](https://raw.githubusercontent.com/psiace/skills/main/skills/README.md): Site overview, conventions, and index.
 - [Friendly Python skill](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/SKILL.md): Entry point for Python guidance.
+- [Piglet skill](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/SKILL.md): Entry point for Python craftsmanship guidance.
 - [Fast Rust skill](https://raw.githubusercontent.com/psiace/skills/main/skills/fast-rust/SKILL.md): Entry point for Rust guidance.
 
 ## Friendly Python references (Markdown)
@@ -21,6 +22,21 @@ This file is Markdown-first for clean parsing. For human-friendly reading, use t
 - [Principles](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/principles.md): Core principles and heuristics.
 - [Reuse and composition](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/reuse-composition.md): Composition-oriented design.
 - [Review checklist](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/references/review-checklist.md): Code review focus areas.
+
+## Piglet references (Markdown)
+
+- [Variables and naming](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/variables-and-naming.md): Naming, scope, and explicit data flow.
+- [Branching and conditions](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/if-else-and-branches.md): Reduce nesting and clarify conditions.
+- [Numbers, strings, containers](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/values-and-containers.md): Replace magic literals and choose containers.
+- [Functions and returns](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/functions-and-returns.md): Stable returns and single responsibility.
+- [Exception handling](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/exceptions-handling.md): Narrow try blocks and specific exceptions.
+- [Loops and iteration](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/loops-and-iteration.md): Iterator helpers for clearer loops.
+- [Decorators](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/decorators.md): Preserve metadata and avoid decorator pitfalls.
+- [Imports and dependencies](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/imports-and-structure.md): Avoid cyclic imports.
+- [Rules and file I/O](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/rules-and-file-io.md): Use appropriate data structures and pathlib.
+- [SOLID in Python](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/solid-python.md): Substitutability and explicit behavior.
+- [Edge cases](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/edge-cases.md): EAFP and simpler main paths.
+- [Walrus operator](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/references/walrus-operator.md): Assignment expressions without repetition.
 
 ## Fast Rust references (Markdown)
 
