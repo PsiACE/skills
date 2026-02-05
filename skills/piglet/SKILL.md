@@ -28,18 +28,18 @@ Concise guidance for writing and reviewing Python code using patterns from One P
 ## Topics
 | Topic | Guidance | Reference |
 | --- | --- | --- |
-| Variables and Naming | Descriptive names, avoid implicit magic, keep variable scope close | references/variables-and-naming.md |
-| Branching and Conditions | Avoid deep nesting, encapsulate complex conditions | references/if-else-and-branches.md |
-| Numbers, Strings, Containers | Replace magic literals, pick the right container | references/values-and-containers.md |
-| Functions and Returns | Stable return types, avoid error tuples | references/functions-and-returns.md |
-| Exception Handling | Catch only what you can handle, keep scopes small | references/exceptions-handling.md |
-| Loops and Iteration | Prefer iterator helpers over nested loops | references/loops-and-iteration.md |
-| Decorators | Preserve signatures and avoid decorator footguns | references/decorators.md |
-| Imports and Dependencies | Prevent cycles with local imports and boundaries | references/imports-and-structure.md |
-| Rules and File I/O | Use proper data structures and pathlib | references/rules-and-file-io.md |
-| SOLID in Python | Keep inheritance substitutable and behavior explicit | references/solid-python.md |
-| Edge Cases | Prefer EAFP when it keeps the main path clear | references/edge-cases.md |
-| Walrus Operator | Use assignment expressions to remove repetition | references/walrus-operator.md |
+| Variables and Naming | Descriptive names, avoid implicit magic, keep variable scope close | [references/variables-and-naming.md](references/variables-and-naming.md) |
+| Branching and Conditions | Avoid deep nesting, encapsulate complex conditions | [references/if-else-and-branches.md](references/if-else-and-branches.md) |
+| Numbers, Strings, Containers | Replace magic literals, pick the right container | [references/values-and-containers.md](references/values-and-containers.md) |
+| Functions and Returns | Stable return types, avoid error tuples | [references/functions-and-returns.md](references/functions-and-returns.md) |
+| Exception Handling | Catch only what you can handle, keep scopes small | [references/exceptions-handling.md](references/exceptions-handling.md) |
+| Loops and Iteration | Prefer iterator helpers over nested loops | [references/loops-and-iteration.md](references/loops-and-iteration.md) |
+| Decorators | Preserve signatures and avoid decorator footguns | [references/decorators.md](references/decorators.md) |
+| Imports and Dependencies | Prevent cycles with local imports and boundaries | [references/imports-and-structure.md](references/imports-and-structure.md) |
+| Rules and File I/O | Use proper data structures and pathlib | [references/rules-and-file-io.md](references/rules-and-file-io.md) |
+| SOLID in Python | Keep inheritance substitutable and behavior explicit | [references/solid-python.md](references/solid-python.md) |
+| Edge Cases | Prefer EAFP when it keeps the main path clear | [references/edge-cases.md](references/edge-cases.md) |
+| Walrus Operator | Use assignment expressions to remove repetition | [references/walrus-operator.md](references/walrus-operator.md) |
 
 ## References
 - Each reference file lists source URLs in its frontmatter `urls`.
