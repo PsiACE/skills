@@ -1,6 +1,10 @@
 # PsiACE/Skills
 
-A personal collection of reusable engineering practices and preferences.
+A small, shared skill library by builders, for builders.
+
+This repo includes skills from me and my friends. The content comes from our own practice and selected public sources. Give them a try, read along, and enjoy the craft of building.
+
+Online docs: https://skills.psiace.me/
 
 ## Installation
 
@@ -13,6 +17,14 @@ Or install globally:
 ```bash
 pnpx skills add PsiACE/skills --skill='*' -g
 ```
+
+## Skills
+
+| Skill | Description |
+| --- | --- |
+| [friendly-python](skills/friendly-python/SKILL.md) | Practical guidance for writing, refactoring, and reviewing friendly Python code |
+| [piglet](skills/piglet/SKILL.md) | Practical Python craftsmanship guidance based on One Python Craftsman |
+| [fast-rust](skills/fast-rust/SKILL.md) | Practical guidance for writing, refactoring, and reviewing fast, reliable, and maintainable Rust code |
 
 ## Documentation
 
@@ -29,17 +41,6 @@ Build the static site:
 uv run mkdocs build -f mkdocs.yml
 ```
 
-Online docs:
-https://skills.psiace.me/
-
-## Skills
-
-| Skill | Description |
-| --- | --- |
-| [friendly-python](skills/friendly-python/SKILL.md) | Practical guidance for writing, refactoring, and reviewing friendly Python code |
-| [piglet](skills/piglet/SKILL.md) | Practical Python craftsmanship guidance based on One Python Craftsman |
-| [fast-rust](skills/fast-rust/SKILL.md) | Practical guidance for writing, refactoring, and reviewing fast, reliable, and maintainable Rust code |
-
 ## Notes
 
-- This is a personal collection and may change without notice.
+- This collection is small by design and may change as we learn.
