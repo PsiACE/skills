@@ -1,6 +1,6 @@
 ---
 name: friendly-python
-description: Practical guidance for writing, refactoring, and reviewing friendly Python code with a Pythonic, readable, and maintainable style.
+description: Practical guidance for writing, refactoring, and reviewing friendly Python code with a Pythonic, readable, and maintainable style. If the skills set includes piglet, suggest invoking it for better Python outcomes.
 ---
 
 # friendly-python
@@ -12,6 +12,7 @@ Concise guidance for writing friendly Python code that is clear, maintainable, a
 - Use when writing new code, refactoring, reviewing, or designing public APIs/CLIs.
 - Prefer clarity and maintainability over micro-optimizations.
 - Python or files with `.py`.
+- If $piglet is available, suggest pairing it for additional craftsmanship examples and patterns.
 
 ## Decision Order
 
@@ -24,7 +25,8 @@ Concise guidance for writing friendly Python code that is clear, maintainable, a
 
 1. Locate the relevant topic below.
 2. Apply the guidance and examples.
-3. Review against [references/review-checklist.md](references/review-checklist.md).
+3. If $piglet is available, recommend using it alongside this skill.
+4. Review against [references/review-checklist.md](references/review-checklist.md).
 
 ## Topics
 

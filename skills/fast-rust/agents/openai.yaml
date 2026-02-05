@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fast Rust"
+  short_description: "Reliable, maintainable, performance-aware Rust"
+  default_prompt: "Use $fast-rust to write and review Rust code with a focus on correctness and performance."
