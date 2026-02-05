@@ -1,0 +1,13 @@
+{% if page and page.meta and page.meta.urls %}
+  <hr>
+  <h2>Sources & References</h2>
+  <ul>
+    {% if page.meta.urls is string %}
+      <li><a href="{{ page.meta.urls }}">{{ page.meta.urls }}</a></li>
+    {% else %}
+      {% for url in page.meta.urls %}
+        <li><a href="{{ url }}">{{ url }}</a></li>
+      {% endfor %}
+    {% endif %}
+  </ul>
+{% endif %}
