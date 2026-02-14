@@ -7,7 +7,7 @@ Thanks to friends who shared feedback, reviews, and examples for this repo.
 [yihong0618](https://github.com/yihong0618) recommended a Python `error-handling` article by [BeautyyuYanli](https://github.com/BeautyyuYanli). [Tison](https://github.com/tisonkun), a prolific open-source contributor, recommended the `error-design` article by [Andy Lok](https://github.com/andylokandy). Yanli and Andy are former
 colleagues of mine. 
 
-[flaneur2020](https://github.com/flaneur2020) shared a daily practice for Go module design.
+[flaneur2020](https://github.com/flaneur2020) shared a daily practice for Go modular design.
 
 The <https://github.com/fast/> org hosts some carefully designed Rust libraries worth exploring.
 

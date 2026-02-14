@@ -1,15 +1,15 @@
 ---
-name: mod-go
-description: Practical guidance for Go module and package design with minimal public APIs, single-responsibility boundaries, stateless-first flow, one-way state transitions, and orchestration-to-capability separation. Use when creating, refactoring, or reviewing Go architecture, package boundaries, interfaces, handlers, managers, builders, and execution flows.
+name: modular-go
+description: Practical guidance for Go package design with minimal public APIs, single-responsibility boundaries, stateless-first flow, one-way state transitions, and orchestration-to-capability separation. Use when creating, refactoring, or reviewing Go architecture, package boundaries, interfaces, handlers, managers, builders, and execution flows.
 ---
 
-# mod-go
+# modular-go
 
-Concise guidance for designing Go modules that stay small, focused, and easy to evolve.
+Concise guidance for designing Go packages that stay small, focused, and easy to evolve.
 
 ## Purpose and Triggers
 
-- Use for Go module or package design, refactoring, and code review.
+- Use for Go package design, refactoring, and code review.
 - Focus on API boundaries, state modeling, and flow decomposition.
 - Use when deciding the right abstraction level: local helper, utility package, manager, or builder.
 - Prefer explicit boundaries over convenience exports.

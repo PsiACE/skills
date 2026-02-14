@@ -1,4 +1,0 @@
-interface:
-  display_name: "Mod Go"
-  short_description: "Minimal, modular Go design guidance"
-  default_prompt: "Use $mod-go to design or refactor Go modules with narrow APIs, stateless-first flows, and clean orchestration boundaries."
