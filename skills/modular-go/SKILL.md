@@ -14,15 +14,17 @@ Concise guidance for designing Go packages that stay small, focused, and easy to
 - Use when deciding the right abstraction level: local helper, utility package, manager, or builder.
 - Prefer explicit boundaries over convenience exports.
 
-## Decision Order
+## Design Principles
 
-1. Keep public surface minimal and intentional.
-2. One package, one responsibility.
-3. Prefer stateless functions; if state is needed, keep transitions one-way.
-4. Separate orchestration from capability methods; keep handlers thin and I/O-focused.
-5. Expose extra public symbols only as stable domain contracts.
-6. Choose the smallest useful abstraction (`xxxutil`, `XXXManager`, `Builder`) based on reuse, lifecycle, and parameter complexity.
-7. Prefer context-driven lifecycle control; expose `Close()` only for external contracts.
+1. Every export is a promise — keep the public surface minimal and intentional.
+2. One package, one responsibility you can explain in one sentence.
+3. Depth over breadth — narrow interfaces that hide rich implementations outlast wide, shallow ones.
+4. Stateless by default — treat mutable state as liability that must justify its lifecycle cost.
+5. Split along responsibility seams, not file size — every new boundary must earn its indirection cost.
+6. Orchestration tells the story; capability methods do the work.
+7. Boundaries are translation layers — convert errors, types, and protocols at the edges, not in core logic.
+8. Choose the smallest abstraction that solves the real problem; resist premature generalization.
+9. Lifecycle is a first-class design concern — design shutdown paths alongside startup paths.
 
 ## Workflow
 
@@ -31,7 +33,8 @@ Concise guidance for designing Go packages that stay small, focused, and easy to
 3. Keep helpers local by default; extract to `xxxutil` only for real cross-package reuse.
 4. Keep transport handlers focused on protocol mapping and delegate behavior to injected dependencies.
 5. Compose orchestration from focused functions, with short stage-intent comments.
-6. Re-check against the reference checklists before merge.
+6. Re-evaluate boundaries when a package can no longer be explained in one sentence.
+7. Re-check against the reference checklists before merge.
 
 ## Topics
 
@@ -40,6 +43,7 @@ Concise guidance for designing Go packages that stay small, focused, and easy to
 | Module Boundary | Expose minimal API and separate deep vs wide interfaces | [references/module-boundary.md](references/module-boundary.md) |
 | State Flow | Use stateless functions and one-shot state objects | [references/state-flow.md](references/state-flow.md) |
 | Orchestration | Use a single public executor and internal helpers | [references/orchestration.md](references/orchestration.md) |
+| gRPC Practices | Keep handlers as thin translators; isolate transport from domain | [references/grpc-practices.md](references/grpc-practices.md) |
 | Review Checklist | Run a fast architecture sanity check before merge | [references/review-checklist.md](references/review-checklist.md) |
 
 ## References
