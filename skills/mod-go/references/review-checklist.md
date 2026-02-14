@@ -25,4 +25,6 @@ Use this checklist for a fast architecture sanity check before merge.
 
 - Is orchestration thin, with helper methods focused on one capability each?
 - Are dependencies, background loops, and shutdown callbacks wired in one constructor path?
+- For gRPC/HTTP handlers, is business logic delegated to injected `XXXManager` or `XXXHandler` dependencies?
+- Are handlers limited to protocol input/output conversion and status/error mapping?
 - Is shutdown driven by `context.Context` cancellation/deadlines instead of public `Close()` when possible?
