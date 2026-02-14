@@ -41,6 +41,11 @@ nav:
       - Compilation Optimization: fast-rust/references/compilation-optimization.md
       - Error Design: fast-rust/references/error-design.md
       - Type Exercise: fast-rust/references/type-exercise.md
+  - Solid Go:
+      - Solid Go: solid-go/SKILL.md
+      - Module Boundary: solid-go/references/module-boundary.md
+      - State Flow: solid-go/references/state-flow.md
+      - Orchestration: solid-go/references/orchestration.md
 
 plugins:
   - search

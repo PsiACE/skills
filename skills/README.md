@@ -20,6 +20,7 @@ https://github.com/psiace/skills#readme
 | friendly-python | Friendly, Pythonic, maintainable code | [SKILL.md](friendly-python/SKILL.md) |
 | piglet | Python craftsmanship patterns and pitfalls | [SKILL.md](piglet/SKILL.md) |
 | fast-rust | Fast, reliable, maintainable Rust code | [SKILL.md](fast-rust/SKILL.md) |
+| solid-go | Minimal, modular Go package design | [SKILL.md](solid-go/SKILL.md) |
 
 ## Notes
 
