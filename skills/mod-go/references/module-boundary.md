@@ -15,6 +15,11 @@
 - Export additional symbols only when they represent stable domain contracts
   (for example: error kinds, option types, small value objects).
 - Prefer a deep module with a narrow API over a wide module with many public knobs.
+- Keep runtime contracts in narrow interfaces, and isolate concrete infrastructure in separate implementation files or packages.
+- When constructor parameters grow, prefer a constructor plus option functions for extensibility and stable call sites.
+- If pure helper functions can be grouped by concern, place them in an `xxxutil` package.
+- Keep `xxxutil` packages stateless: no stateful structs, only pure utility functions.
+- For APIs with complex parameter groups, expose a dedicated `Builder` type (for example, `QemuArgsBuilder`) to assemble validated options.
 
 ## Deep vs Wide Interfaces
 
@@ -30,3 +35,6 @@
 - Is every additional exported symbol a stable contract?
 - Can internal helpers be moved behind unexported boundaries?
 - Does the package expose behavior contracts rather than assembly details?
+- Are interfaces focused on behavior while implementation details stay behind constructors?
+- If an `xxxutil` package exists, does it avoid stateful structs?
+- If parameters are complex or coupled, would a `Builder` make construction clearer and safer?
