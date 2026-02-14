@@ -8,23 +8,20 @@ urls:
 
 ## Goals
 
-- Keep complex flows readable without leaking helper complexity.
-- Isolate sequencing decisions from low-level implementation details.
-- Make the main execution path obvious and testable.
+- Keep complex flows readable and testable.
+- Separate sequencing from implementation details.
 
 ## Guidance
 
 - For a complex flow, expose one obvious executor entry point.
 - Use either a package-level function (`Run`/`Execute`) or an object method, based on package style.
-- Construct services in one place: wire dependencies, start background loops, and register shutdown callbacks in the constructor.
-- For transport handlers (gRPC/HTTP), avoid embedding business logic; delegate behavior to injected `XXXManager` or domain `XXXHandler` dependencies.
-- Keep handlers focused on protocol concerns: input validation, type conversion, and output/status mapping.
+- Keep constructor-time wiring in one place (dependencies, background loops, shutdown callbacks).
+- For transport handlers (gRPC/HTTP), avoid business logic and delegate behavior to injected `XXXManager` or domain `XXXHandler` dependencies.
+- Keep handlers focused on protocol input/output mapping.
 - In orchestration flows, add one short comment line for each stage to state intent and improve scanability.
 - Keep all helper methods unexported and focused on one operation each.
-- Treat orchestration as composition of focused functions:
-  - Orchestration method handles order, branching, and error mapping.
-  - Capability methods handle one task each.
-- Keep orchestration thin; push domain work to small, testable functions.
+- Keep orchestration thin: handle order, branching, and error mapping only.
+- Keep capability methods single-purpose and testable.
 
 ## Review Bullets
 
