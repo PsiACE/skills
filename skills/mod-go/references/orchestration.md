@@ -1,3 +1,9 @@
+---
+urls:
+  - https://go.dev/blog/context-and-structs
+  - https://go.dev/blog/error-handling-and-go
+---
+
 # Orchestration
 
 ## Goals
@@ -13,6 +19,7 @@
 - Construct services in one place: wire dependencies, start background loops, and register shutdown callbacks in the constructor.
 - For transport handlers (gRPC/HTTP), avoid embedding business logic; delegate behavior to injected `XXXManager` or domain `XXXHandler` dependencies.
 - Keep handlers focused on protocol concerns: input validation, type conversion, and output/status mapping.
+- In orchestration flows, add one short comment line for each stage to state intent and improve scanability.
 - Keep all helper methods unexported and focused on one operation each.
 - Treat orchestration as composition of focused functions:
   - Orchestration method handles order, branching, and error mapping.
@@ -26,5 +33,6 @@
 - Is constructor-time wiring explicit for background workers and shutdown paths?
 - For gRPC/HTTP handlers, is business logic delegated to injected manager/handler dependencies?
 - Do handlers focus on I/O mapping and protocol translation instead of domain decisions?
+- Does each orchestration stage include a short intent comment?
 - Does the executor only coordinate, instead of doing all details itself?
 - Can you read the primary `Run`/`Execute` flow top-to-bottom as a story?

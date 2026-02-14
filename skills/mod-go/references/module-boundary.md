@@ -1,3 +1,9 @@
+---
+urls:
+  - https://go.dev/blog/package-names
+  - https://go.dev/doc/effective_go
+---
+
 # Module Boundary
 
 ## Goals

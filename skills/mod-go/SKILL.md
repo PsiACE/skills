@@ -47,3 +47,8 @@ Concise guidance for designing Go modules that stay small, focused, and easy to 
 | State Flow | Use stateless functions and one-shot state objects | [references/state-flow.md](references/state-flow.md) |
 | Orchestration | Use a single public executor and internal helpers | [references/orchestration.md](references/orchestration.md) |
 | Review Checklist | Run a fast architecture sanity check before merge | [references/review-checklist.md](references/review-checklist.md) |
+
+## References
+
+- Reference files are intentionally short and task-focused.
+- Source links are listed in each reference file frontmatter `urls`.

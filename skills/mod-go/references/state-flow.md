@@ -1,3 +1,9 @@
+---
+urls:
+  - https://go.dev/blog/context
+  - https://go.dev/doc/effective_go#concurrency
+---
+
 # State Flow
 
 ## Goals
