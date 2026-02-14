@@ -10,6 +10,7 @@ This file is Markdown-first for clean parsing. For human-friendly reading, use t
 - [Friendly Python skill](https://raw.githubusercontent.com/psiace/skills/main/skills/friendly-python/SKILL.md): Entry point for Python guidance.
 - [Piglet skill](https://raw.githubusercontent.com/psiace/skills/main/skills/piglet/SKILL.md): Entry point for Python craftsmanship guidance.
 - [Fast Rust skill](https://raw.githubusercontent.com/psiace/skills/main/skills/fast-rust/SKILL.md): Entry point for Rust guidance.
+- [Modular Go skill](https://raw.githubusercontent.com/psiace/skills/main/skills/modular-go/SKILL.md): Entry point for Go package design guidance.
 
 ## Friendly Python references (Markdown)
 
@@ -43,6 +44,13 @@ This file is Markdown-first for clean parsing. For human-friendly reading, use t
 - [Compilation optimization](https://raw.githubusercontent.com/psiace/skills/main/skills/fast-rust/references/compilation-optimization.md): Build times and incremental workflow.
 - [Error design](https://raw.githubusercontent.com/psiace/skills/main/skills/fast-rust/references/error-design.md): Error types, context, and ergonomics.
 - [Type exercise](https://raw.githubusercontent.com/psiace/skills/main/skills/fast-rust/references/type-exercise.md): Type-driven design practice.
+
+## Modular Go references (Markdown)
+
+- [Module boundary](https://raw.githubusercontent.com/psiace/skills/main/skills/modular-go/references/module-boundary.md): Narrow public APIs and deep vs wide interface choices.
+- [State flow](https://raw.githubusercontent.com/psiace/skills/main/skills/modular-go/references/state-flow.md): Stateless-first design and one-way state transitions.
+- [Orchestration](https://raw.githubusercontent.com/psiace/skills/main/skills/modular-go/references/orchestration.md): Single executor entry points and helper decomposition.
+- [Review checklist](https://raw.githubusercontent.com/psiace/skills/main/skills/modular-go/references/review-checklist.md): Fast architecture sanity checks for module design reviews.
 
 ## Optional (Markdown)
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Modular Go"
+  short_description: "Minimal, modular Go design guidance"
+  default_prompt: "Use $modular-go to design or refactor Go packages with narrow APIs, stateless-first flows, and clean orchestration boundaries."
