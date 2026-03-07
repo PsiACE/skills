@@ -21,6 +21,10 @@ urls:
 - Pair shared resource acquisition with deterministic release paths.
 - Prefer shutdown through `context.Context`; expose `Close()` only when external contracts require it.
 
+## Error Design
+
+- Centralize error-to-wire conversion at request boundaries only.
+
 ## Review Bullets
 
 - Can this logic be a pure function instead of a mutable object?
@@ -29,3 +33,4 @@ urls:
 - Are lock boundaries explicit and narrow?
 - Is every acquired shared resource paired with a deterministic release path?
 - Is shutdown driven by `context.Context` instead of public `Close()` where possible?
+- Is error-to-wire conversion centralized at boundaries?

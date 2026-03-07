@@ -3,7 +3,7 @@ urls:
   - https://go.dev/wiki/CodeReviewComments
 ---
 
-# Mod Go Review Checklist
+# Modular Go Review Checklist
 
 Use this checklist for a fast architecture sanity check before merge.
 
@@ -26,12 +26,18 @@ Use this checklist for a fast architecture sanity check before merge.
 ## Parameters and Construction
 
 - For simple optional parameters, are option functions sufficient and stable for call sites?
-- For complex or coupled parameter sets, is a dedicated `Builder` provided (for example, `QemuArgsBuilder`)?
+- For complex or coupled parameter sets, is a dedicated `Builder` provided?
 
 ## Orchestration and Shutdown
 
 - Is orchestration thin, with helper methods focused on one capability each?
 - Does each orchestration stage include a short intent comment?
 - Are dependencies, background loops, and shutdown callbacks wired in one constructor path?
-- For gRPC/HTTP handlers, is business logic delegated to injected `XXXManager` or `XXXHandler` dependencies?
-- Are handlers limited to protocol input/output conversion and status/error mapping?
+- Is every package boundary justified by a distinct responsibility, not file size?
+
+## Transport Handlers (gRPC/HTTP)
+
+- Do handlers follow unmarshal → delegate → marshal and nothing else?
+- Is business logic delegated to injected domain dependencies, not implemented in handlers?
+- Is error-to-status conversion centralized rather than scattered across handlers?
+- Are domain dependencies injected via constructor, not accessed through globals?
