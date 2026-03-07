@@ -39,7 +39,7 @@ class NewsGrabber:
 
     def format_news(self, news: Iterable[News]) -> str:
         result: List[str] = []
-        for item in self.get_news():
+        for item in news:
             result.append(self._format_one_news(item))
         return '\n'.join(result)
 
