@@ -25,6 +25,7 @@ pnpx skills add PsiACE/skills --skill='*' -g
 | [friendly-python](skills/friendly-python/SKILL.md) | Practical guidance for writing, refactoring, and reviewing friendly Python code |
 | [piglet](skills/piglet/SKILL.md) | Practical Python craftsmanship guidance based on One Python Craftsman |
 | [fast-rust](skills/fast-rust/SKILL.md) | Practical guidance for writing, refactoring, and reviewing fast, reliable, and maintainable Rust code |
+| [modular-go](skills/modular-go/SKILL.md) | Practical guidance for Go package design with minimal public APIs and clean orchestration boundaries |
 
 ## Documentation
 
