@@ -41,12 +41,13 @@ nav:
       - Compilation Optimization: fast-rust/references/compilation-optimization.md
       - Error Design: fast-rust/references/error-design.md
       - Type Exercise: fast-rust/references/type-exercise.md
-  - Mod Go:
-      - Mod Go: mod-go/SKILL.md
-      - Module Boundary: mod-go/references/module-boundary.md
-      - State Flow: mod-go/references/state-flow.md
-      - Orchestration: mod-go/references/orchestration.md
-      - Review Checklist: mod-go/references/review-checklist.md
+  - Modular Go:
+      - Modular Go: modular-go/SKILL.md
+      - Module Boundary: modular-go/references/module-boundary.md
+      - State Flow: modular-go/references/state-flow.md
+      - Orchestration: modular-go/references/orchestration.md
+      - gRPC Practices: modular-go/references/grpc-practices.md
+      - Review Checklist: modular-go/references/review-checklist.md
 
 plugins:
   - search

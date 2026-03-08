@@ -50,6 +50,7 @@ This file is Markdown-first for clean parsing. For human-friendly reading, use t
 - [Module boundary](https://raw.githubusercontent.com/psiace/skills/main/skills/modular-go/references/module-boundary.md): Narrow public APIs and deep vs wide interface choices.
 - [State flow](https://raw.githubusercontent.com/psiace/skills/main/skills/modular-go/references/state-flow.md): Stateless-first design and one-way state transitions.
 - [Orchestration](https://raw.githubusercontent.com/psiace/skills/main/skills/modular-go/references/orchestration.md): Single executor entry points and helper decomposition.
+- [gRPC practices](https://raw.githubusercontent.com/psiace/skills/main/skills/modular-go/references/grpc-practices.md): Thin transport handlers, centralized status mapping, and explicit dependency injection.
 - [Review checklist](https://raw.githubusercontent.com/psiace/skills/main/skills/modular-go/references/review-checklist.md): Fast architecture sanity checks for module design reviews.
 
 ## Optional (Markdown)
