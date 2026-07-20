@@ -19,6 +19,9 @@ nav:
       - Extension Architecture: friendly-python/references/extension-architecture.md
       - OOP Design: friendly-python/references/oop-design.md
       - Portability & Pythonic: friendly-python/references/portability-pythonic.md
+      - Python Conventions: friendly-python/references/python-conventions.md
+      - Testing: friendly-python/references/testing.md
+      - Application Architecture: friendly-python/references/application-architecture.md
       - Principles: friendly-python/references/principles.md
       - Reuse & Composition: friendly-python/references/reuse-composition.md
       - Review Checklist: friendly-python/references/review-checklist.md

@@ -16,6 +16,11 @@ urls:
 - Offer a simple constructor for common cases.
 - Allow limited multi-type parameters without overloading meaning.
 - Keep the default usage to a few lines.
+- In public in-process APIs, accept the domain object when callers already have
+  it instead of requiring them to extract an internal ID or field.
+- Use identifiers at serialization, storage, or process boundaries, or when the
+  identity itself is the explicit contract.
+- Do not expose internal members merely to make another public call possible.
 
 ## Example
 

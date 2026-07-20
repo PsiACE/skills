@@ -17,6 +17,9 @@ urls:
 
 - Prefer EAFP where it improves clarity, but keep failure scope tight.
 - Catch specific exceptions; avoid blanket catches.
+- Never catch `BaseException`. Catch `Exception` only at a boundary that logs and
+  re-raises, translates with explicit chaining, or provides a last-resort user
+  response while preserving operational visibility.
 - Batch tasks can isolate per-item failures; pipelines often stop early.
 - When re-raising, keep the original context.
 
@@ -38,17 +41,21 @@ except SomeError:
     handle_error()
 ```
 
-Raising and handling a specific error path:
+Raise and handle a specific error path:
 
 ```python
+class ResourceUnavailable(Exception):
+    """Raised when a required resource cannot be loaded."""
+
+
 def foo():
-    # do something
-    raise Exception("something wrong")
+    raise ResourceUnavailable("resource is temporarily unavailable")
+
 
 try:
     foo()
-except Exception as e:
-    # handle exception
+except ResourceUnavailable as exc:
+    handle_unavailable_resource(exc)
 ```
 
 Batch-style call site:

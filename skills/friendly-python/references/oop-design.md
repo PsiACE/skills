@@ -7,61 +7,46 @@ urls:
 
 ## Goals
 
-- Construction paths should be explicit and unambiguous.
-- Avoid leaking internal mechanics to callers.
+- Keep construction and the public contract explicit.
+- Hide implementation details without adding boilerplate.
 
 ## Guidance
 
-- Avoid piling mutually exclusive flags in `__init__`.
-- Use `@classmethod` or standalone factories for alternate construction.
-- Prefer explicit fields; use descriptors when you need DRY plus IDE hints.
-- Avoid exposing metaclasses or internal registries to users.
+- Distinguish public and private members. Prefix private modules, models,
+  classes, methods, and attributes with `_`.
+- Export only the members callers need. Avoid exposing registries, metaclasses,
+  descriptors, or storage details.
+- Store simple values as normal class or instance attributes.
+- Use `@property` only when a value must be computed on access.
+- Avoid mutually exclusive flags in `__init__`. Use a named class method or
+  standalone factory for an alternate construction path.
+- Do not add repetitive validation to trusted internal objects. Validate
+  user-controlled input at the interface boundary with Pydantic.
 
 ## Example
 
-Multiple switches in `__init__` quickly become unclear:
-
 ```python
-class Settings:
-    ...
-    def __init__(self, **kwargs, from_env=False, from_file=None):
-        if from_env:
-            self._load_from_env()
-        elif from_file:
-            self._load_from_file(from_file)
-        else:
-            for k, v in kwargs.items():
-                setattr(self, k, v)
+from decimal import Decimal
+
+from pydantic import BaseModel, Field
+
+
+class CreateAccountInput(BaseModel):
+    balance: Decimal = Field(ge=0)
+
+
+class Account:
+    currency = "GBP"
+
+    def __init__(self, *, account_id: str, balance: Decimal) -> None:
+        self._account_id = account_id
+        self._balance = balance
+        self._reserved = Decimal("0")
+
+    @property
+    def available_balance(self) -> Decimal:
+        return self._balance - self._reserved
 ```
 
-Descriptors make configuration explicit without hiding behavior:
-
-```python
-class ConfigItem:
-    def __set_name__(self, owner, name):
-        self.name = name
-        self.env_name = "CONFIG_" + name.upper()
-
-    def __get__(self, instance, owner):
-        if instance is None:
-            return self
-        return instance._data[self.name] or os.getenv(self.env_name)
-
-# Usage
-class Settings:
-    db_url = ConfigItem()
-    db_password = ConfigItem()
-    ...
-```
-
-```python
-class Settings:
-
-    db_user = ConfigItem()
-
-    @ConfigItem
-    def db_password(self, value):
-        if len(value) < 8:
-            raise ValueError("Password must be at least 8 characters")
-        return value
-```
+`CreateAccountInput` validates user input. `Account` receives trusted values,
+keeps its internal state private, and computes only the derived value.

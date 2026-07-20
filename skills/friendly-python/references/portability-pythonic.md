@@ -52,10 +52,10 @@ Prefer `try/except/finally` for lifecycle callbacks:
 try:
     data = await download_file(url)
     # onSuccess
-except Exception as err:
-    pass  # onError
+except DownloadError as exc:
+    report_download_failure(exc)
 finally:
-    pass  # onComplete
+    record_download_attempt()
 ```
 
 Prefer context managers for effect-like lifecycles:
