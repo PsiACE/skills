@@ -1,6 +1,6 @@
 ---
 name: friendly-python
-description: Practical guidance for writing, refactoring, testing, and reviewing Python code and application boundaries with a Pythonic, readable, and maintainable style. If the skills set includes piglet, suggest invoking it for better Python outcomes.
+description: Practical guidance for writing, refactoring, and reviewing friendly Python code with a Pythonic, readable, and maintainable style. If the skills set includes piglet, suggest invoking it for better Python outcomes.
 ---
 
 # friendly-python
@@ -24,11 +24,9 @@ Concise guidance for writing friendly Python code that is clear, maintainable, a
 ## Workflow
 
 1. Locate the relevant topic below.
-2. Start from its layout and reference example when code spans packages or test
-   scopes; adapt domain names without weakening the boundaries.
-3. Apply the guidance and examples.
-4. If $piglet is available, recommend using it alongside this skill.
-5. Review against [references/review-checklist.md](references/review-checklist.md).
+2. Apply the guidance and examples.
+3. If $piglet is available, recommend using it alongside this skill.
+4. Review against [references/review-checklist.md](references/review-checklist.md).
 
 ## Topics
 
@@ -38,7 +36,7 @@ Concise guidance for writing friendly Python code that is clear, maintainable, a
 | Error Handling | Catch only what you can handle; preserve context | [references/error-handling.md](references/error-handling.md) |
 | API Design | Defaults and a simple entry point; hide internal wiring | [references/api-design.md](references/api-design.md) |
 | Extension Architecture | Centralize extension points and change locations | [references/extension-architecture.md](references/extension-architecture.md) |
-| OOP Design | Keep public surfaces small; use attributes and computed properties | [references/oop-design.md](references/oop-design.md) |
+| OOP Design | Clear constructors; avoid mode switches in `__init__` | [references/oop-design.md](references/oop-design.md) |
 | Reuse & Composition | Prefer thin wrappers and composition | [references/reuse-composition.md](references/reuse-composition.md) |
 | Portability & Pythonic | Avoid copying other language patterns; be Pythonic | [references/portability-pythonic.md](references/portability-pythonic.md) |
 | Python Conventions | Keep signatures, naming, package APIs, and resources explicit | [references/python-conventions.md](references/python-conventions.md) |
