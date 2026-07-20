@@ -57,27 +57,22 @@ class CreateInvoiceInput(BaseModel):
     amount: Decimal = Field(gt=0)
 
 
-class Account:
-    def __init__(self, *, account_id: str) -> None:
-        self._account_id = account_id
-
-
 @dataclass(frozen=True)
 class Invoice:
-    account: Account
+    account_id: str
     amount: Decimal
     issued_at: datetime
 
 
 def create_invoice(
     *,
-    account: Account,
+    account_id: str,
     amount: Decimal,
     issued_at: datetime,
     save_invoice: Callable[[Invoice], None],
 ) -> Invoice:
     invoice = Invoice(
-        account=account,
+        account_id=account_id,
         amount=amount,
         issued_at=issued_at,
     )
@@ -85,9 +80,8 @@ def create_invoice(
     return invoice
 ```
 
-The interface validates the payload, resolves `account_id` to an `Account`, and
-owns the clock. The application API receives the object, while the
-infrastructure adapter supplies `save_invoice`.
+The interface validates the payload and owns the clock, then passes trusted
+values inward. The infrastructure adapter supplies `save_invoice`.
 
 ## Operations
 

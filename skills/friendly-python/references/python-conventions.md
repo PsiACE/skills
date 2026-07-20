@@ -36,8 +36,6 @@ a second API in `__init__.py`.
   classes, methods, and attributes with `_`.
 - Keep the public surface small and give each exported object one canonical
   import path. List re-exports explicitly and avoid wildcard imports.
-- Prefer passing domain objects through public in-process APIs. Do not require
-  callers to extract internal IDs unless identity is part of the contract.
 - Use a trailing `_` only for a genuine name collision.
 - Use type annotations for types, docstrings for public contracts, and comments
   for non-obvious implementation reasons.

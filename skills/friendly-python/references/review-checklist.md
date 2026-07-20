@@ -24,7 +24,7 @@ urls:
 - Do new features require edits in too many places?
 - Is the entry point obvious for users?
 - Is the public surface minimal, with private members prefixed by `_`?
-- Does a public API expose an internal ID where it could accept the object?
+- Does a public API require an internal ID where it could accept the object?
 - Are changes localized and reversible?
 - Are signatures explicit, with keyword-only arguments where positions are unclear?
 - Does interface code translate requests rather than contain business rules?
