@@ -14,14 +14,8 @@ urls:
 
 - Avoid piling mutually exclusive flags in `__init__`.
 - Use `@classmethod` or standalone factories for alternate construction.
-- Prefer explicit fields. Use `@property` only when a value must be computed on
-  access.
-- Distinguish public and private members. Prefix private modules, models,
-  classes, methods, and attributes with `_`.
-- Export only the members callers need. Avoid exposing metaclasses, internal
-  registries, descriptors, or storage details.
-- Do not add repetitive validation to trusted internal objects. Validate
-  user-controlled input at the interface boundary with Pydantic.
+- Prefer explicit fields; use descriptors when you need DRY plus IDE hints.
+- Avoid exposing metaclasses or internal registries to users.
 
 ## Example
 
@@ -40,28 +34,45 @@ class Settings:
                 setattr(self, k, v)
 ```
 
-Validate user input once, keep internal state private, and compute only derived
-values:
+Descriptors make configuration explicit without hiding behavior:
 
 ```python
-from decimal import Decimal
+class ConfigItem:
+    def __set_name__(self, owner, name):
+        self.name = name
+        self.env_name = "CONFIG_" + name.upper()
 
-from pydantic import BaseModel, Field
+    def __get__(self, instance, owner):
+        if instance is None:
+            return self
+        return instance._data[self.name] or os.getenv(self.env_name)
 
-
-class CreateAccountInput(BaseModel):
-    balance: Decimal = Field(ge=0)
-
-
-class Account:
-    currency = "GBP"
-
-    def __init__(self, *, account_id: str, balance: Decimal) -> None:
-        self._account_id = account_id
-        self._balance = balance
-        self._reserved = Decimal("0")
-
-    @property
-    def available_balance(self) -> Decimal:
-        return self._balance - self._reserved
+# Usage
+class Settings:
+    db_url = ConfigItem()
+    db_password = ConfigItem()
+    ...
 ```
+
+```python
+class Settings:
+
+    db_user = ConfigItem()
+
+    @ConfigItem
+    def db_password(self, value):
+        if len(value) < 8:
+            raise ValueError("Password must be at least 8 characters")
+        return value
+```
+
+## Additional Recommendations
+
+- Distinguish public and private members. Prefix private modules, models,
+  classes, methods, and attributes with `_`.
+- Export only the members callers need.
+- Prefer normal class or instance attributes for stored values. Use `@property`
+  for values computed on access; reserve descriptors for specialized reusable
+  behavior.
+- Avoid repetitive validation on trusted internal objects. Validate
+  user-controlled input at the interface boundary with Pydantic.
