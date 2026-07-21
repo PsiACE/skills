@@ -22,6 +22,7 @@ nav:
       - Python Conventions: friendly-python/references/python-conventions.md
       - Testing: friendly-python/references/testing.md
       - Application Architecture: friendly-python/references/application-architecture.md
+      - Kill AI Slop: friendly-python/references/kill-ai-slop.md
       - Principles: friendly-python/references/principles.md
       - Reuse & Composition: friendly-python/references/reuse-composition.md
       - Review Checklist: friendly-python/references/review-checklist.md

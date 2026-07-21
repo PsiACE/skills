@@ -65,14 +65,3 @@ class Settings:
             raise ValueError("Password must be at least 8 characters")
         return value
 ```
-
-## Additional Recommendations
-
-- Distinguish public and private members. Prefix private modules, models,
-  classes, methods, and attributes with `_`.
-- Export only the members callers need.
-- Prefer normal class or instance attributes for stored values. Use `@property`
-  for values computed on access; reserve descriptors for specialized reusable
-  behavior.
-- Avoid repetitive validation on trusted internal objects. Validate
-  user-controlled input at the interface boundary with Pydantic.

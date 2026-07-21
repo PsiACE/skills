@@ -73,9 +73,3 @@ def my_effect():
 
 use_effect(my_effect, [])
 ```
-
-## Additional Recommendations
-
-- Treat broad `Exception` and `pass` in the lifecycle example as callback-position
-  placeholders. Production code should catch specific errors and make handling
-  and cleanup explicit.

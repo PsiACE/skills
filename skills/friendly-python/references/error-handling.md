@@ -57,12 +57,3 @@ Batch-style call site:
 for bar in bars:
     foo(bar)
 ```
-
-## Additional Recommendations
-
-- Treat `Exception` in the example as a placeholder. Production code should
-  raise and catch specific exception types.
-- Never catch `BaseException`.
-- Catch `Exception` only at a boundary that logs and re-raises, translates with
-  explicit chaining, or provides a last-resort response while preserving
-  operational visibility.
