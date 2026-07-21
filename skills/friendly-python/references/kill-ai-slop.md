@@ -13,7 +13,26 @@ Remove boilerplate that imitates safety while making contracts harder to see.
 - Keep handwritten checks for behavioral domain invariants that a data schema
   cannot express clearly, not for recreating a runtime type system.
 
-Use strict Pydantic fields when coercion would hide invalid stored data:
+Avoid recreating a schema with primitive guards:
+
+```python
+class InvalidStoredMemory(ValueError):
+    """Raised when serialized memory does not match its schema."""
+
+
+def _string(value: object, label: str) -> str:
+    if not isinstance(value, str):
+        raise InvalidStoredMemory("string", label)
+    return value
+
+
+def _integer(value: object, label: str) -> int:
+    if isinstance(value, bool) or not isinstance(value, int):
+        raise InvalidStoredMemory("integer", label)
+    return value
+```
+
+Prefer one strict model at the serialization boundary:
 
 ```python
 from pydantic import BaseModel, ConfigDict
@@ -25,6 +44,10 @@ class StoredMemory(BaseModel):
     label: str
     value: str | None
     sequence: int
+
+
+def load_memory(payload: object) -> StoredMemory:
+    return StoredMemory.model_validate(payload)
 ```
 
 ## Contracts
@@ -37,6 +60,18 @@ class StoredMemory(BaseModel):
   explicit contract.
 - Store simple values as class or instance attributes. Use `@property` for
   values computed on access and descriptors for specialized reusable behavior.
+
+Avoid making callers extract an implementation detail:
+
+```python
+invoice = issue_invoice(account_id=account.id, amount=amount)
+```
+
+Prefer passing the object already held by the caller:
+
+```python
+invoice = issue_invoice(account=account, amount=amount)
+```
 
 ## Failure Paths
 
