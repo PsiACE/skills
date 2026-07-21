@@ -9,6 +9,8 @@ colleagues of mine.
 
 [flaneur2020](https://github.com/flaneur2020) shared a daily practice for Go modular design.
 
+[Kraken Technologies](https://github.com/octoenergy/public-conventions) publishes the Python, testing, and application conventions that informed several `friendly-python` references.
+
 The <https://github.com/fast/> org hosts some carefully designed Rust libraries worth exploring.
 
 And yes, you might also like [PsiACE](https://github.com/PsiACE), that is me.

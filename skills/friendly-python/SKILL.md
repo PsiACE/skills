@@ -39,9 +39,14 @@ Concise guidance for writing friendly Python code that is clear, maintainable, a
 | OOP Design | Clear constructors; avoid mode switches in `__init__` | [references/oop-design.md](references/oop-design.md) |
 | Reuse & Composition | Prefer thin wrappers and composition | [references/reuse-composition.md](references/reuse-composition.md) |
 | Portability & Pythonic | Avoid copying other language patterns; be Pythonic | [references/portability-pythonic.md](references/portability-pythonic.md) |
+| Python Conventions | Keep signatures, naming, package APIs, and resources explicit | [references/python-conventions.md](references/python-conventions.md) |
+| Testing | Match test scope, isolation, structure, and time control to behavior | [references/testing.md](references/testing.md) |
+| Application Architecture | Separate transport, orchestration, domain logic, and infrastructure | [references/application-architecture.md](references/application-architecture.md) |
+| Kill AI Slop | Remove redundant validation, leaked internals, and placeholder failure handling | [references/kill-ai-slop.md](references/kill-ai-slop.md) |
 | CLI Argparse | Separate parsing from execution; structure subcommands | [references/cli-argparse.md](references/cli-argparse.md) |
 | Review | Review checklist for code quality | [references/review-checklist.md](references/review-checklist.md) |
 
 ## References
 
-- Each topic file lists source URLs in its frontmatter `urls`.
+- Topic files must list source URLs in frontmatter `urls` unless an explicit
+  exception applies.
