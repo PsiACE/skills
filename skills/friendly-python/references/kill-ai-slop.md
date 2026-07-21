@@ -1,10 +1,3 @@
----
-urls:
-  - https://github.com/octoenergy/public-conventions/blob/main/conventions/python.md
-  - https://github.com/octoenergy/public-conventions/blob/main/conventions/application.md
-  - https://github.com/octoenergy/public-conventions/blob/main/conventions/patterns.md
----
-
 # Kill AI Slop
 
 Remove boilerplate that imitates safety while making contracts harder to see.
