@@ -20,7 +20,8 @@ value = _optional_string(payload["value"], "value")
 sequence = _integer(payload["sequence"], "sequence")
 ```
 
-Prefer one strict model at the serialization boundary:
+When coercion would hide invalid persisted data, prefer one strict model at the
+serialization boundary:
 
 ```python
 from pydantic import BaseModel, ConfigDict

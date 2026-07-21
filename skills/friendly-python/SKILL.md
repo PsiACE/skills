@@ -48,4 +48,5 @@ Concise guidance for writing friendly Python code that is clear, maintainable, a
 
 ## References
 
-- Each topic file lists source URLs in its frontmatter `urls`.
+- Topic files must list source URLs in frontmatter `urls` unless an explicit
+  exception applies.

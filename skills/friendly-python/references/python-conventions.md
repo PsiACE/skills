@@ -29,8 +29,9 @@ a second API in `__init__.py`.
 - Declare expected parameters explicitly. Reserve `*args` and `**kwargs` for
   forwarding or compatibility requirements.
 - Prefer keyword-only parameters when positional meaning is unclear.
-- Raise a specific exception or return an explicit result instead of silently
-  skipping unsuccessful work.
+- Return an explicit result only when it represents a normal domain outcome.
+  Represent failures with specific exceptions instead of silently skipping
+  unsuccessful work.
 - Use singular nouns for classes and enums. Name values by domain role.
 - Distinguish public and private members. Prefix private modules, models,
   classes, methods, and attributes with `_`.
