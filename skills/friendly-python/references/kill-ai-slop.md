@@ -16,20 +16,8 @@ Remove boilerplate that imitates safety while making contracts harder to see.
 Avoid recreating a schema with primitive guards:
 
 ```python
-class InvalidStoredMemory(ValueError):
-    """Raised when serialized memory does not match its schema."""
-
-
-def _string(value: object, label: str) -> str:
-    if not isinstance(value, str):
-        raise InvalidStoredMemory("string", label)
-    return value
-
-
-def _integer(value: object, label: str) -> int:
-    if isinstance(value, bool) or not isinstance(value, int):
-        raise InvalidStoredMemory("integer", label)
-    return value
+value = _optional_string(payload["value"], "value")
+sequence = _integer(payload["sequence"], "sequence")
 ```
 
 Prefer one strict model at the serialization boundary:
@@ -41,13 +29,11 @@ from pydantic import BaseModel, ConfigDict
 class StoredMemory(BaseModel):
     model_config = ConfigDict(strict=True)
 
-    label: str
     value: str | None
     sequence: int
 
 
-def load_memory(payload: object) -> StoredMemory:
-    return StoredMemory.model_validate(payload)
+memory = StoredMemory.model_validate(payload)
 ```
 
 ## Contracts
