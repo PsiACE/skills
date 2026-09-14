@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remotion Product Video"
+  short_description: "Code-rendered product videos with safe, reusable components"
+  default_prompt: "Use $remotion-product-video to create a code-rendered product video with verified brand assets, safe framing, and reusable Remotion components."
